@@ -1,0 +1,40 @@
+size(400,200);
+
+// Blue color
+fill(92,172,196);
+stroke(255,82,84);
+noStroke();
+rect(20,20,100,50);
+
+// Red Color
+fill(255,0,0);
+// Left eye
+ellipse(38,42,30,30);
+
+// R-G-B is set to 255 for white color
+fill(255,255,255);
+// Left eye inside ellipse
+ellipse(38,36,10,10);
+
+
+// Set the color to red again 
+fill(255,0,0);
+// right eye
+ellipse(101,42,30,30);
+fill(255,255,255);
+// Left eye inside ellipse
+ellipse(101,36,10,10);
+
+
+// Middle Part - Set the color
+fill(255,0,0);
+rect(20,73,100,110);
+
+// set feet color
+fill(92,172,196);
+rect(30,185,18,18);
+
+rect(92,185,18,18);
+
+
+
