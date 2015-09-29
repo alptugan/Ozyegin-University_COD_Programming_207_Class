@@ -1,0 +1,16 @@
+// set the size of the wiindow
+size(300,200);
+
+// set the stroke color
+stroke(0,0,255);
+
+// set the stroke weight
+strokeWeight(20);
+
+// draw a line
+line(15,15,100,15);
+
+// Draw a triangle
+stroke(0,255,0);
+strokeWeight(1);
+triangle(30, 75, 58, 20, 86, 75);
