@@ -1,0 +1,9 @@
+void setup() {
+  frameRate(60);
+  println("I’m starting");
+}
+void draw() {
+  // Displays the frame count to the Console
+  println("I’m drawing");
+  println(frameCount);
+}
