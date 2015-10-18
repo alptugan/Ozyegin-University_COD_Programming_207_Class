@@ -1,0 +1,11 @@
+void setup() {
+  size(480, 120);
+  fill(0, 102);
+  smooth();
+  noStroke();
+}
+
+void draw() {
+  //1- background(204);
+  println("mouse x pos: " + mouseX + " | " + "mouse y pos: " + mouseY);
+}
