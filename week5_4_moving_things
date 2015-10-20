@@ -1,0 +1,59 @@
+int counter=0;
+int speedFac = 5;
+
+Boolean toLeft = false;
+
+void setup() {
+  size(400, 400);
+  background(255);
+}
+
+
+void draw() {
+
+  background(255);
+  fill(150);
+
+
+
+
+  if (toLeft == false) {
+    counter = counter + speedFac;
+
+    if (counter > width) {
+      toLeft = true;
+    }
+  } else {
+    counter = counter - speedFac;
+    
+    if(counter < 0) {
+      toLeft = false;
+    }
+  }
+
+  ellipse(counter, 100, 30, 30);
+  /*
+  */
+}
+
+void mousePressed() {
+  speedFac++;
+  
+}
+
+void keyPressed() {
+  
+  if(keyCode == UP) {
+    speedFac++;
+  }
+  
+  if(keyCode == DOWN) {
+    speedFac--;
+    
+    if(speedFac < 0) 
+    {
+      speedFac = 0;
+    }
+  }
+  
+}
