@@ -1,0 +1,16 @@
+PFont f;
+
+void setup() {
+  size(400,400);
+  background(0);
+  
+  f = createFont("AdobeHebrew-Bold.otf",24);
+  textFont(f);
+}
+
+
+void draw() {
+  
+  background(0);
+  text("This is my serif font", 100,100);
+}
