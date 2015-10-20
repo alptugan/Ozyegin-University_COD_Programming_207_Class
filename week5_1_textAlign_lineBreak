@@ -1,0 +1,17 @@
+String foo = "Lorem ipsum dolor sit\namet, consectetur adipiscing elit.\nInteger id commodo diam.\nDonec posuere dictum eros.\nPraesent et ex finibus, dignissim nunc varius,\nconvallis sem.";
+
+
+void setup() {
+  size(800,600);
+  background(#2d89ef);
+  textSize(22);
+  textLeading(38);
+  textAlign(RIGHT);
+  //smooth();
+}
+
+void draw() {
+   
+  background(#2d89ef);
+  text(foo,width*0.5 + textWidth(foo)*0.5,height*0.5);
+}
