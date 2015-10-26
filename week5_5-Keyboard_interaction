@@ -1,0 +1,49 @@
+String nonAscii="";
+String lastWord;
+
+void setup() {
+     size(500, 500);
+     background(#3498DB);
+     textSize(64);
+     textAlign(CENTER);
+}
+   void draw() {
+     background(#3498DB);
+   
+     fill(#ECF0F1);
+     textSize(64);
+     text(nonAscii, width*0.5, height*0.5);
+     
+     textSize(12);
+     textLeading(12); 
+     String mousePos = "x:"+str(mouseX) + "\n" + "y:"+str(mouseY);
+
+     
+     text(mousePos,mouseX + 20,mouseY + 30);
+}
+
+void keyPressed() {
+  
+  lastWord = nonAscii;
+  
+  nonAscii = str(key);
+
+  
+  if(keyCode == LEFT) {
+     nonAscii = "Left Key"; 
+  }
+  
+  else if(keyCode == RIGHT) {
+    nonAscii = "Right Key";
+  }
+  
+  /*
+  else if() {
+    
+    
+  }*/
+  
+  if(keyCode == BACKSPACE) {
+    nonAscii = "";
+  }
+}
