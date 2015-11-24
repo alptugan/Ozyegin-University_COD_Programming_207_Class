@@ -1,0 +1,27 @@
+// organic movement
+float yMov;
+float movFac = random(4,10);
+
+
+void setup() {
+  size(640,480);
+  
+}
+
+void draw() {
+  background(255);
+  
+  yMov = (sin(millis() * 0.002)) * int(movFac);
+  
+  fill(0);
+  translate(width*0.5,height*0.5);
+  ellipse(0,yMov,30,30);
+  
+  yMov = (sin(millis() * 0.003)) * int(movFac);
+  ellipse(-60,yMov,30,30);
+  
+  yMov = (sin(millis() * 0.005)) * int(movFac);
+  ellipse(60,yMov,30,30);
+  
+  
+}
