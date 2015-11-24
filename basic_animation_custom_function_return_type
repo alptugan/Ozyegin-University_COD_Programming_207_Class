@@ -1,0 +1,38 @@
+float yMov;
+float moveFac = 100;
+
+int cRad = 40;
+
+void setup() {
+  size(400,400);
+}
+
+void draw() {
+  background(200);
+  
+  
+  
+  //println(yMov);
+  
+  noStroke();
+  fill(#ff0000);
+ 
+  ellipse(width*0.5,height*0.5 + calculateYmoveReturnType(0.005,10),cRad,cRad);
+  
+  fill(#fff000);
+  ellipse(width*0.5 + cRad, height*0.5 + calculateYmoveReturnType(0.001,20),cRad,cRad);
+  
+  fill(#f00002);
+  rect(10,200 + calculateYmoveReturnType(0.003,5),20,30);
+}
+
+float calculateYmoveReturnType(float theSpeed, float movement) {
+  yMov = sin(millis() * theSpeed) * movement;
+  
+  return yMov;
+}
+
+void calculateYmove() {
+  yMov = sin(millis() * 0.005) * moveFac;
+}
+
