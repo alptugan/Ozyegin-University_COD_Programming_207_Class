@@ -1,0 +1,33 @@
+int [] numbers = new int[60];
+
+
+
+void setup() {
+  size(500,500);
+  
+  // Create a for loop and set array elements
+  for(int i = 0; i < numbers.length; i = i + 1) {
+    numbers[i] = (i + 1);
+  }
+
+  
+}
+
+
+void draw() {
+  background(255);
+  int ypos = 0;
+  for(int i = 0; i < numbers.length; i = i + 1) {
+    
+    
+    
+    if(i % 2 == 0) {
+      ypos = int(height*0.5) + 10;
+    }else{
+      ypos = int(height*0.5) - 10;
+    }
+     ellipse(i*10,ypos,numbers[i],numbers[i]);
+  }
+  //rect(numbers[0],numbers[4],numbers[3],numbers[2]);
+  
+}
