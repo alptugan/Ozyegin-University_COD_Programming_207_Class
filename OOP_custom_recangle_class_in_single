@@ -1,0 +1,74 @@
+alpRect rect1;
+
+void setup() {
+  size(700,500);
+  
+  rect1 = new alpRect(0,0,40,60,100);
+}
+
+
+void draw() {
+  
+ 
+  background(255);
+  
+  
+  rect(200,10,50,50);
+  
+  
+  rect1.drawAlpRect();
+  
+  
+  rect1.cl = int(map(mouseX, 0, width, 0,150));
+  rect1.x = mouseX;
+  rect1.y = mouseY;
+  
+  rect1.h = int(map(mouseY, 0, height, 20, 100));
+  
+  /*
+  fill(0);
+  noStroke();
+  rect(10,10,50,50);
+  */
+}
+
+
+
+// Custom Class name
+class alpRect {
+  
+  int x = 10;
+  int y = 10;
+  int w = 50;
+  int h = 50;
+  
+  int cl = 0;
+  
+  // This is the constructor function of The alpRect Class
+  alpRect(int _x, int _y, int _w, int _h, int _cl) {
+    
+    // public variables of alpRect Class
+    this.x = _x;
+    this.y = _y;
+    this.w = _w;
+    this.h = _h;
+    this.cl = _cl;
+    
+  }
+  
+  
+  // custom draw function
+  void drawAlpRect() {
+    fill(cl);
+    noStroke();
+    
+    rect(x,y,w,h);
+    
+    fill(255);
+    stroke(1);
+    
+  }
+  
+  
+  
+}
