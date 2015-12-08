@@ -1,0 +1,27 @@
+float rt = 0;
+float rndRot;
+
+void setup() {
+  size(500,500);
+  
+}
+
+
+void draw() {
+  
+  if(frameCount % 10 == 0) {
+    rndRot = random(-0.05,0.5);
+  }
+  
+  
+  rt = rt + 0.1;
+  
+  background(200);
+  rectMode(CENTER);
+  pushMatrix();
+  translate(width*0.5,height*0.5);
+  rotate(rndRot);
+  rect(0,0,50,50);
+  popMatrix();
+  
+}
