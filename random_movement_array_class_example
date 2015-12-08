@@ -1,0 +1,74 @@
+
+alpRect rect1;
+
+alpRect [] rects = new alpRect[100];
+color [] cls = new color[100];
+
+void setup() {
+  size(700, 500);
+
+  rect1 = new alpRect(0, 0, 40, 40, 100);
+}
+
+
+void draw() {
+
+
+  background(255);
+
+  for (int i = 0; i < rects.length; i++) {
+    int rndX = 0;
+    int rndY = 0;
+    //if (frameCount % 10 == 0) {
+      rndX = int(random(0, width));
+      rndY = int(random(0, height));
+    //}
+
+
+    rects[i] = new alpRect(rndX, rndY, 40, 40, cls[i]);
+
+
+    rects[i].drawAlpRect();
+  }
+}
+
+void mousePressed() {
+   for (int i = 0; i < rects.length; i++) {
+     cls[i] = color(random(255),random(255),random(255),150);
+   }
+}
+
+// Custom Class name
+class alpRect {
+
+  int x = 10;
+  int y = 10;
+  int w = 50;
+  int h = 50;
+
+  color cl;
+
+  // This is the constructor function of The alpRect Class
+  alpRect(int _x, int _y, int _w, int _h, int _cl) {
+
+    // public variables of alpRect Class
+    this.x = _x;
+    this.y = _y;
+    this.w = _w;
+    this.h = _h;
+    this.cl = _cl;
+  }
+
+
+  // custom draw function
+  void drawAlpRect() {
+    fill(cl);
+    noStroke();
+  
+    rect(x,y, w*0.5,h*0.5);
+    rect(x, y, w, h);
+
+    fill(255);
+    stroke(1);
+  }
+}
